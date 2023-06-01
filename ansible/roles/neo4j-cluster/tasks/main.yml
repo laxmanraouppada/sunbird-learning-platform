@@ -31,6 +31,7 @@
 
 - name: Change Permissions neo4j-enterprise-3.0.4 
   become: yes
+  become_user: "{{learner_user}}"
   file: path={{ neo4j_home }} mode=0755 owner={{learner_user}} group={{learner_user}} recurse=yes
 
 
