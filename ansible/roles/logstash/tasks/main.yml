@@ -2,6 +2,7 @@
 # tasks file for logstash
 - name: add permissions
   become: yes
+  become_user: "{{learner_user}}"
   file: path={{learner_user_home}} mode=0755 recurse=yes owner={{learner_user}} group={{learner_user}}
 
 - name: Download the zip
