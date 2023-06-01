@@ -20,7 +20,8 @@
     when: neo4j_upstream_download
 
 - hosts: learning-neo4j-cluster
-  gather_facts: false
+  become: yes
+  become_user: deployer
   vars_files:
     - "{{inventory_dir}}/secrets.yml"
   pre_tasks:
