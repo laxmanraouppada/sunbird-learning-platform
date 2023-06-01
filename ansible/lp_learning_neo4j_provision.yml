@@ -21,7 +21,7 @@
 
 - hosts: learning-neo4j-cluster
   become: yes
-  become_user: deployer
+  become_user: learning
   vars_files:
     - "{{inventory_dir}}/secrets.yml"
   pre_tasks:
