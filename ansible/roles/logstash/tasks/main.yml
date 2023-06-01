@@ -44,4 +44,5 @@
 
 - command: systemctl daemon-reload
   become: yes
+  become_user: root
   when: use_systemd
